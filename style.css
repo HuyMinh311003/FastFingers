@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@300&display=swap');
+
+*{
+    font-family: "Itim", sans-serif;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 136, 255);
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(0, 136, 255);
+}
+
+.game_container{
+    margin: 5px;
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0, 136, 255);
+}
+
+#title{
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 300;
+    color: rgb(255, 0, 0)
+}
+
+#keyword_container{
+    display: flex;
+    justify-content: center;
+}
+
+#keyWord{
+    width: 30%;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 10px;
+    background-color: rgb(47, 255, 154);
+}
+
+#score, #timer{
+    font-size: 30px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+#input{
+    height: 30px;
+    width: 70%;
+    margin: 10px;
+}
+
+#resetBtn{
+    width: 15%;
+    height: 35px;
+    font-size: 25px;
+    background-color: rgb(0, 247, 255);
+}
+
+#resetBtn:hover{
+    background-color: rgb(0, 204, 255);
+}
+
+#resetBtn:active{
+    background-color: blue;
+}
+
+.announce{
+    margin: 8px;
+    font-size: 25px;
+    color: yellow;
+    font-weight: 300;
+}
+
+#keyboard_container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-content: column;
+    width: 100%;
+    margin: 5px;
+}
+
+#line_1, #line_2, #line_3{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-content: row;
+}
+
+#line_1>div,
+#line_2>div,
+#line_3>div {
+    margin: 10px 15px 0px 15px;
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 300;
+    width: 80px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral ;
+    border-radius: 30%;
+}
+
+#line_1>div:hover,
+#line_2>div:hover,
+#line_3>div:hover {
+    filter: brightness(0.9);
+}
+
+#line_1>div:active,
+#line_2>div:active,
+#line_3>div:active {
+    filter: brightness(0.8);
+}
