@@ -10,14 +10,15 @@ let keyWords = ['cat', 'yellow', 'stairs', 'happy', 'enormous', 'beer', 'clothes
 
 let random = keyWords[Math.floor(Math.random() * keyWords.length)]; 
 let point = 0;
-let time = 30;
+let time = 15;
 let countdown = setInterval(timer, 1000);
+let error = 0;
 
 word.innerHTML = random;
 
 //Ham giup game hoat dong
 function game(){
-    score.innerHTML = "Point: " + point;
+    score.innerHTML = "Point: " + point + " Error: " + error;
     random = keyWords[Math.floor(Math.random() * keyWords.length)];
     word.innerHTML = random;
     input.value ="";
@@ -30,7 +31,7 @@ input.addEventListener("keyup", ({key}) => {
             game();
         }
         else{
-            point--;
+            error++;
             game();
         }
     }
@@ -41,7 +42,8 @@ restartBtn.addEventListener("click", restart);
 
 function restart(){
     point = 0;
-    time = 30;
+    error = 0;
+    time = 15;
     game();
 }
 
@@ -49,7 +51,8 @@ function restart(){
 function timer(){
     timeLeft.innerHTML = "Time: " + time;
     time--;
-    if (time <= 0) {
+    if (time == -2) {
+        alert("HET THOI GIAN !!");
         restart();
     }
 }
